@@ -1,0 +1,148 @@
+Microsoft Windows [Version 10.0.22621.2861]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Ashley>cd C:\Users\Ashley\OneDrive\Desktop\MorseDocks
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>dir
+ Volume in drive C is OS
+ Volume Serial Number is 6275-AD2B
+
+ Directory of C:\Users\Ashley\OneDrive\Desktop\MorseDocks
+
+12/15/2023  06:53 PM    <DIR>          .
+12/15/2023  06:49 PM    <DIR>          ..
+12/15/2023  06:50 PM                80 .gitattributes
+12/15/2023  06:50 PM                36 .gitignore
+12/15/2023  06:53 PM    <DIR>          .godot
+12/15/2023  06:50 PM               950 icon.svg
+12/15/2023  06:50 PM               843 icon.svg.import
+12/15/2023  06:53 PM               501 project.godot
+               5 File(s)          2,410 bytes
+               3 Dir(s)  260,141,314,048 bytes free
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git init
+Initialized empty Git repository in C:/Users/Ashley/OneDrive/Desktop/MorseDocks/.git/
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>dir
+ Volume in drive C is OS
+ Volume Serial Number is 6275-AD2B
+
+ Directory of C:\Users\Ashley\OneDrive\Desktop\MorseDocks
+
+12/15/2023  06:59 PM    <DIR>          .
+12/15/2023  06:49 PM    <DIR>          ..
+12/15/2023  06:50 PM                80 .gitattributes
+12/15/2023  06:50 PM                36 .gitignore
+12/15/2023  06:53 PM    <DIR>          .godot
+12/15/2023  06:50 PM               950 icon.svg
+12/15/2023  06:50 PM               843 icon.svg.import
+12/15/2023  06:53 PM               501 project.godot
+               5 File(s)          2,410 bytes
+               3 Dir(s)  260,140,400,640 bytes free
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitattributes
+        .gitignore
+        icon.svg
+        icon.svg.import
+        project.godot
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git add --all
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitattributes
+        new file:   .gitignore
+        new file:   icon.svg
+        new file:   icon.svg.import
+        new file:   project.godot
+
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git commit -v
+Aborting commit due to empty commit message.
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git commit -v
+Aborting commit due to empty commit message.
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git commit -v
+Aborting commit due to empty commit message.
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git commit -v
+Aborting commit due to empty commit message.
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git config --global --unset-all core.editor
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git config --global core.editor "Notepad++ -w"
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git commit -v
+hint: Waiting for your editor to close the file... Notepad++ -w: line 1: Notepad++: command not found
+error: There was a problem with the editor 'Notepad++ -w'.
+Please supply the message using either -m or -F option.
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git config core.editor "Notepad++ -w"
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git commit -v
+hint: Waiting for your editor to close the file... Notepad++ -w: line 1: Notepad++: command not found
+error: There was a problem with the editor 'Notepad++ -w'.
+Please supply the message using either -m or -F option.
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git config --global core.editor 'code --wait'
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git commit -v
+hint: Waiting for your editor to close the file... Notepad++ -w: line 1: Notepad++: command not found
+error: There was a problem with the editor 'Notepad++ -w'.
+Please supply the message using either -m or -F option.
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git config --global --unset-all core.editor
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git config --global core.editor 'code --wait'
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git commit -v
+hint: Waiting for your editor to close the file... Notepad++ -w: line 1: Notepad++: command not found
+error: There was a problem with the editor 'Notepad++ -w'.
+Please supply the message using either -m or -F option.
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git config core.editor 'code --wait'
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git commit -v
+hint: Waiting for your editor to close the file... 'code: -c: line 1: unexpected EOF while looking for matching `''
+error: There was a problem with the editor ''code'.
+Please supply the message using either -m or -F option.
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git config core.editor 'code'
+warning: core.editor has multiple values
+error: cannot overwrite multiple values with a single value
+       Use a regexp, --add or --replace-all to change core.editor.
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git config --global --unset-all core.editor
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git config core.editor 'code'
+warning: core.editor has multiple values
+error: cannot overwrite multiple values with a single value
+       Use a regexp, --add or --replace-all to change core.editor.
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git config --global --unset-all core.editor
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>git config core.editor 'code'
+warning: core.editor has multiple values
+error: cannot overwrite multiple values with a single value
+       Use a regexp, --add or --replace-all to change core.editor.
+
+C:\Users\Ashley\OneDrive\Desktop\MorseDocks>

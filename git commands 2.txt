@@ -1,0 +1,185 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\Ashley> cd C:\Users\Ashley\OneDrive\Desktop\MorseDocks
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitattributes
+        new file:   .gitignore
+        new file:   icon.svg
+        new file:   icon.svg.import
+        new file:   project.godot
+
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git commit -v
+hint: Waiting for your editor to close the file... 'code: -c: line 1: unexpected EOF while looking for matching `''
+error: There was a problem with the editor ''code'.
+Please supply the message using either -m or -F option.
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git commit -m  "initializing git repository"
+[master (root-commit) 0459932] initializing git repository
+ 5 files changed, 62 insertions(+)
+ create mode 100644 .gitattributes
+ create mode 100644 .gitignore
+ create mode 100644 icon.svg
+ create mode 100644 icon.svg.import
+ create mode 100644 project.godot
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git log
+commit 0459932dd0f64beb8a7790edc9ce42a0c88b2cfa (HEAD -> master)
+Author: Ashley M <ashleyemaurer@gmail.com>
+Date:   Fri Dec 15 19:20:31 2023 -0500
+
+    initializing git repository
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   project.godot
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        mainScene.tscn
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> gd
+gd : The term 'gd' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ gd
++ ~~
+    + CategoryInfo          : ObjectNotFound: (gd:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> cat mainScene.tscn
+[gd_scene load_steps=2 format=3 uid="uid://bxyaown1uhf01"]
+
+[ext_resource type="Texture2D" uid="uid://c3x6idrmpdkef" path="res://icon.svg" id="1_65d2l"]
+
+[node name="mainScene" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(192, 120)
+texture = ExtResource("1_65d2l")
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git -add --all
+unknown option: -add
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git add --all
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> gst
+gst : The term 'gst' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ gst
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (gst:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> dir
+
+
+    Directory: C:\Users\Ashley\OneDrive\Desktop\MorseDocks
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+da---l        12/15/2023   6:53 PM                .godot
+-a---l        12/15/2023   6:50 PM             80 .gitattributes
+-a---l        12/15/2023   6:50 PM             36 .gitignore
+-a---l        12/15/2023   6:50 PM            950 icon.svg
+-a---l        12/15/2023   6:50 PM            843 icon.svg.import
+-a---l        12/15/2023   7:24 PM            301 mainScene.tscn
+-a---l        12/15/2023   7:24 PM            539 project.godot
+
+
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   mainScene.tscn
+        modified:   project.godot
+
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git commit -m "add first scene"
+[master b90e474] add first scene
+ 2 files changed, 10 insertions(+)
+ create mode 100644 mainScene.tscn
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git log
+commit b90e474545fba974c486338eb069d9faf7ff49c7 (HEAD -> master)
+Author: Ashley M <ashleyemaurer@gmail.com>
+Date:   Fri Dec 15 19:27:05 2023 -0500
+
+    add first scene
+
+commit 0459932dd0f64beb8a7790edc9ce42a0c88b2cfa
+Author: Ashley M <ashleyemaurer@gmail.com>
+Date:   Fri Dec 15 19:20:31 2023 -0500
+
+    initializing git repository
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git remote add origin https://github.com/ashley44511/morseDocks.git
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git push -u origin master
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (11/11), 2.19 KiB | 2.19 MiB/s, done.
+Total 11 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/ashley44511/morseDocks/pull/new/master
+remote:
+To https://github.com/ashley44511/morseDocks.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git fetch morseDocks
+fatal: 'morseDocks' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git fetch morseDocks
+fatal: 'morseDocks' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git pull
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 618 bytes | 88.00 KiB/s, done.
+From https://github.com/ashley44511/morseDocks
+ * [new branch]      main       -> origin/main
+Already up to date.
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git pull morseDocks
+fatal: 'morseDocks' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git pull origin/master
+fatal: 'origin/master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git pull origin
+Already up to date.
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks> git pull origin master
+From https://github.com/ashley44511/morseDocks
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+PS C:\Users\Ashley\OneDrive\Desktop\MorseDocks>

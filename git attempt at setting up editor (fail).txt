@@ -1,0 +1,8 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\Ashley> git config --global --unset-all core.editor
+PS C:\Users\Ashley> git config --global core.editor "code --wait"
+PS C:\Users\Ashley>
